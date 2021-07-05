@@ -1,0 +1,319 @@
+@media (max-width: 1200px) {
+  .conteiner {
+    max-width: 970px;
+  }
+  .header {
+    &__content {
+      padding: 100px 0 40px 0;
+    }
+  }
+  .get-card {
+    padding: 100px 0 40px 0;
+    &__wrp-card-pluce {
+      padding: 100px 0;
+    }
+  }
+  .baner {
+    &::before {
+      top: 100px;
+      left: -80px;
+    }
+    &__wrp-img {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .card-plus {
+    max-width: 310px;
+    max-height: 320px;
+    padding: 25px 20px;
+    &__img {
+      margin-bottom: 20px;
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+  .happy-users {
+    color: $font-color-white;
+    padding: 100px 0;
+  }
+  .messege {
+    padding: 100px 0 160px 0;
+    &__wrp {
+      max-width: 475px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .conteiner {
+    max-width: 750px;
+  }
+  .header {
+    &__content {
+      padding: 80px 0 40px 0;
+    }
+  }
+  .baner {
+    &::before {
+      top: 100px;
+      left: -130px;
+    }
+    &__wrp-img {
+      background-image: none;
+      padding: 0;
+    }
+  }
+  .get-card {
+    padding: 80px 0 80px 0;
+    &__wrp-card-pluce {
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 0 40px 0;
+    }
+  }
+  .card-plus {
+    padding: 80px 60px;
+    max-width: 500px;
+    max-height: 400px;
+    &:hover::before {
+      width: 120%;
+      top: 0;
+      left: -10%;
+      height: 100%;
+    }
+    &__img {
+      margin-bottom: 30px;
+    }
+    &__title {
+      margin-bottom: 30px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  .happy-users {
+    color: $font-color-white;
+    padding: 80px 0;
+    &__wrp {
+      flex-wrap: wrap;
+    }
+    &__indicator {
+      @include flex-wrp-column;
+    }
+    &__icon {
+      margin-bottom: 20px;
+      @include text-size(40px, 40px);
+    }
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      @include text-size(40px, 36px);
+    }
+    &__text {
+      @include text-size(18px, 20px);
+    }
+  }
+  .messege {
+    padding: 80px 0 80px 0;
+    &__wrp {
+      max-width: 365px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .conteiner {
+    max-width: 550px;
+  }
+  .header {
+    &__content {
+      padding: 50px 0;
+    }
+  }
+  .baner {
+    &::before {
+      display: none;
+    }
+    &__wrp-img {
+      display: none;
+    }
+    &__apply-btn {
+      margin: 0;
+    }
+    &__title {
+      @include text-size(38px, 40px);
+      margin-bottom: 20px;
+    }
+    &__text {
+      @include text-size(14px, 28px);
+      margin-bottom: 30px;
+    }
+  }
+  .get-card {
+    padding: 50px 0;
+    &__wrp-card-pluce {
+      padding: 40px 0 10px 0;
+    }
+  }
+  .card-plus {
+    padding: 50px 40px;
+    max-width: 450px;
+    max-height: 350px;
+  }
+  .happy-users {
+    color: $font-color-white;
+    padding: 60px 0;
+    &__wrp {
+      flex-wrap: wrap;
+    }
+    &__indicator {
+      @include flex-wrp-column;
+    }
+    &__icon {
+      margin-bottom: 15px;
+      @include text-size(30px, 30px);
+    }
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      @include text-size(28px, 36px);
+    }
+    &__text {
+      @include text-size(18px, 20px);
+      max-width: 100px;
+    }
+  }
+  .messege {
+    padding: 80px 0 80px 0;
+    &__title {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    &__form {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__wrp {
+      align-self: stretch;
+      max-width: 550px;
+      &:first-child {
+        margin-bottom: 20px;
+      }
+      & > input {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .conteiner {
+    max-width: 360px;
+  }
+  .header {
+    &__content {
+      padding: 30px 0;
+    }
+  }
+  .baner {
+    &__title {
+      @include text-size(28px, 36px);
+      margin-bottom: 10px;
+    }
+    &__text {
+      @include text-size(14px, 22px);
+      margin-bottom: 15px;
+    }
+    &__apply-btn {
+      @include btn(4px 40px, $btn-color-background-white, $btn-color-blue);
+      &_text {
+        @include text-size(12px, 28px);
+      }
+    }
+  }
+  .get-card {
+    padding: 30px 0;
+    &__wrp-card-pluce {
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
+    }
+    &__slogan {
+      margin-bottom: 10px;
+      @include text-size(18px, 24px);
+    }
+    &__title {
+      @include text-size(24px, 28px);
+    }
+  }
+  .card-plus {
+    padding: 20px 20px;
+    max-width: 320px;
+    max-height: 400px;
+    &:hover::before {
+      width: 105%;
+      top: 0;
+      left: -2.5%;
+      height: 100%;
+    }
+    &__img {
+      margin-bottom: 20px;
+    }
+    &__title {
+      @include text-size(16px, 20px);
+      margin-bottom: 15px;
+    }
+    &__text {
+      @include text-size(12px, 248x);
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  .happy-users {
+    color: $font-color-white;
+    padding: 30px 0;
+    &__wrp {
+      flex-wrap: wrap;
+    }
+    &__indicator {
+      @include flex-wrp-column;
+      width:50%;
+      &:nth-child(1),&:nth-child(2){
+        margin-bottom: 20px;
+      }
+    }
+    &__icon {
+      margin-bottom: 10px;
+      @include text-size(30px, 30px);
+    }
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      @include text-size(28px, 30px);
+    }
+    &__text {
+      @include text-size(14px, 18px);
+    }
+  }
+  .messege {
+    padding: 30px 0;
+    &__wrp {
+      max-width: 370px;
+    }
+  }
+  .footer {
+    padding: 30px 0 30px 0;
+  }
+}
+@media (max-width: 380px) {
+  .conteiner {
+    max-width: 310px;
+  }
+  .card-plus {
+    max-width: 280px;
+  }
+}

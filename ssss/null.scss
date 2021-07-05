@@ -1,0 +1,30 @@
+/*add null style*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+input::-ms-clear {
+  display: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  line-height: normal;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+}
+button,
+input {
+  overflow: hidden;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}

@@ -1,0 +1,16 @@
+//text
+%text-poppins-regular {
+  @include text-font($font-poppins, $font-regular);
+}
+%text-poppins-light {
+  @include text-font($font-poppins, $font-light);
+}
+%text-poppins-semibold {
+  @include text-font($font-poppins, $font-semibold);
+}
+%text-nunito-regular {
+  @include text-font($font-nunito, $font-regular);
+}
+%text-raleway-regular {
+  @include text-font($font-raleway, $font-regular);
+}

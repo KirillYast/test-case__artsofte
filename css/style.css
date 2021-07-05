@@ -1,0 +1,1252 @@
+/*Nulling style*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*add null style*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  line-height: normal;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+}
+
+button,
+input {
+  overflow: hidden;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/*fonts*/
+@font-face {
+  font-family: "Poppins";
+  src: local("poppins"), url(../font/poppins-semibold.woff2) format("woff2"), url(../font/poppins-semibold.woff) format("woff"), url(../font/poppins-semibold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("poppins"), url(../font/poppins-regular.woff2) format("woff2"), url(../font/poppins-regular.woff) format("woff"), url(../font/poppins-regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("poppins"), url(../font/poppins-light.woff2) format("woff2"), url(../font/poppins-light.woff) format("woff"), url(../font/poppins-light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito";
+  src: local("nunito"), url(../font/nunito-regular.woff2) format("woff2"), url(../font/nunito-regular.woff) format("woff"), url(../font/nunito-regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: local("raleway"), url(../font/raleway-regular.woff2) format("woff2"), url(../font/raleway-regular.woff) format("woff"), url(../font/raleway-regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/*btn variable*/
+/*shared style*/
+.footer__text, .get-card__slogan {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+
+.logo__text::after {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+}
+
+.messege__title, .happy-users__text, .happy-users__title, .card-plus__title, .get-card__title, .baner__apply-btn_text, .baner__title, .menu__login-btn_text, .menu__item_text, .logo__text {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+}
+
+.baner__text {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+
+.messege__wrp > button, .messege__wrp > input, .messege__wrp > textarea, .card-plus__text {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+
+/*page style*/
+.page {
+  max-width: 1920px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.page__main {
+  flex-grow: 1;
+}
+
+.conteiner {
+  margin: 0 auto;
+  max-width: 1170px;
+  box-sizing: border-box;
+}
+
+.content-index-top {
+  position: relative;
+  z-index: 2;
+}
+
+/*header style*/
+.header {
+  background-color: #bebebe;
+  background: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%);
+}
+.header__high-line {
+  position: relative;
+}
+.header__high-line::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  background: linear-gradient(to top, #071d68 0%, #0b4bec 100%);
+  opacity: 0.1;
+  z-index: 1;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  padding: 38.5px 0;
+}
+.header__content {
+  padding: 190px 0 40px 0;
+}
+
+.logo {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.logo__img {
+  margin: 0 15px 0 0;
+}
+.logo__text {
+  white-space: nowrap;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 0.18px;
+  text-shadow: 0 3px 3px rgba(30, 28, 28, 0.75);
+  position: relative;
+}
+.logo__text::after {
+  position: absolute;
+  content: "Be Safe Banking";
+  font-size: 12px;
+  line-height: 26px;
+  text-transform: initial;
+  letter-spacing: 2.5px;
+  top: 19px;
+  left: 0;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+}
+.menu__nav {
+  padding: 0 37px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu__nav_element:not(:first-child) {
+  margin-left: 45px;
+}
+.menu__item {
+  display: block;
+  color: #ffffff;
+  white-space: nowrap;
+  transition: color 0.5s, background-color 0.5s;
+}
+.menu__item_text {
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
+}
+.menu__item:hover {
+  color: #8f98be;
+}
+.menu__item:active {
+  color: #0b4bec;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+.menu__login-btn {
+  border-radius: 12px;
+  transition: color 0.5s, background-color 0.5s;
+  padding: 1px 13px;
+  background-color: #ffffff;
+  color: #0b4bec;
+  white-space: nowrap;
+}
+.menu__login-btn_text {
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -0.3px;
+}
+.menu__login-btn:hover {
+  background-color: #8f98be;
+}
+.menu__login-btn:active {
+  color: #ffffff;
+  background-color: #0b4bec;
+  border: 0.1px solid #ffffff;
+}
+
+.baner {
+  color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.baner::before {
+  content: "";
+  z-index: 1;
+  width: 196px;
+  height: 293px;
+  position: absolute;
+  top: 55px;
+  left: -115px;
+  background: url(/img/header-back-1.png) center/cover no-repeat;
+}
+.baner__title {
+  font-size: 40px;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+.baner__text {
+  max-width: 940px;
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 56px;
+}
+.baner__apply-btn {
+  margin-bottom: 92px;
+  border-radius: 22px;
+  transition: color 0.5s, background-color 0.5s;
+  padding: 8px 48px;
+  background-color: #ffffff;
+  color: #0b4bec;
+  white-space: nowrap;
+}
+.baner__apply-btn_text {
+  font-size: 14px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.baner__apply-btn:hover {
+  background-color: #8f98be;
+}
+.baner__apply-btn:active {
+  color: #ffffff;
+  background-color: #0b4bec;
+  border: 0.1px solid #ffffff;
+}
+.baner__wrp-img {
+  padding-bottom: 152px;
+  position: relative;
+  background-image: url(/img/header-1b.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.baner__wrp-img::after {
+  content: "";
+  z-index: 1;
+  width: 414px;
+  height: 370px;
+  position: absolute;
+  top: 63px;
+  left: -304px;
+  background: url(/img/header-2.png) center/cover no-repeat;
+}
+.baner__wrp-img::before {
+  content: "";
+  z-index: 1;
+  width: 414px;
+  height: 370px;
+  position: absolute;
+  top: 63px;
+  right: -304px;
+  background: url(/img/header-2.png) center/cover no-repeat;
+}
+.baner__img {
+  display: block;
+  width: 570px;
+  height: 357px;
+  position: relative;
+}
+
+/*main style*/
+/*get card section*/
+.get-card {
+  background-color: #f3f2f2;
+  padding: 160px 0 100px 0;
+}
+.get-card__slogan {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #808080;
+}
+.get-card__title {
+  font-size: 30px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #333333;
+}
+.get-card__wrp-card-pluce {
+  display: flex;
+  justify-content: space-between;
+  padding: 140px 0;
+}
+
+.card-plus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 50px 40px;
+  max-width: 370px;
+  max-height: 345px;
+  position: relative;
+}
+.card-plus > * {
+  z-index: 5;
+}
+.card-plus:hover > span, .card-plus:hover > p {
+  color: #ffffff;
+}
+.card-plus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s;
+}
+.card-plus:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -12%;
+  height: 124.347826087%;
+  background: #0934a9;
+  z-index: 3;
+  transition: all 0.5s;
+}
+.card-plus__img {
+  margin-bottom: 23px;
+}
+.card-plus__title {
+  margin-bottom: 23px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333333;
+}
+.card-plus__text {
+  text-align: center;
+  font-size: 13.5px;
+  line-height: 28px;
+  color: #808080;
+}
+
+/*happy users section*/
+.happy-users {
+  color: #ffffff;
+  background: url("/img/indicatos-background.png") center/cover;
+  padding: 180px 0;
+  position: relative;
+}
+.happy-users::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0b4bec;
+  background: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%);
+  opacity: 0.9;
+  z-index: 1;
+}
+.happy-users__wrp {
+  display: flex;
+  justify-content: space-between;
+}
+.happy-users__wrp > * {
+  z-index: 5;
+}
+.happy-users__indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.happy-users__icon {
+  margin-bottom: 50px;
+  font-size: 56px;
+  line-height: 42px;
+}
+.happy-users__title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 52px;
+  line-height: 40px;
+}
+.happy-users__text {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+/*messeg section*/
+.messege {
+  padding: 137px 0 273px 0;
+}
+.messege__title {
+  margin-bottom: 50px;
+  color: #333333;
+  text-align: left;
+  font-size: 30px;
+  line-height: 28px;
+}
+.messege__form {
+  display: flex;
+  justify-content: space-between;
+}
+.messege__wrp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 550px;
+  align-items: stretch;
+  flex-grow: 1;
+}
+.messege__wrp > input, .messege__wrp > textarea {
+  padding: 10px 20px;
+  border: 1px solid #e0e0e0;
+  color: #333333;
+  text-align: left;
+  font-size: 14px;
+  line-height: 28px;
+}
+.messege__wrp > input:not(:last-child), .messege__wrp > textarea:not(:last-child) {
+  margin-bottom: 30px;
+}
+.messege__wrp > input[name=username], .messege__wrp > textarea[name=username] {
+  text-transform: capitalize;
+}
+.messege__wrp > textarea {
+  padding-bottom: 63px;
+}
+.messege__wrp > button {
+  padding: 10.8px;
+  background-color: #0b4bec;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 28px;
+  white-space: nowrap;
+  transition: color 0.5s, background-color 0.5s;
+}
+.messege__wrp > button:hover {
+  background-color: #8f98be;
+}
+.messege__wrp > button:active {
+  color: #0b4bec;
+  background-color: #ffffff;
+  border: 0.1px solid #0b4bec;
+}
+
+/*footer style*/
+.footer {
+  background: url("/img/fouter-background.png") center/cover;
+  padding: 34px 0 67px 0;
+  position: relative;
+}
+.footer::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0b4bec;
+  background: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%);
+  opacity: 0.9;
+  z-index: 1;
+}
+.footer__text {
+  font-size: 14px;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .conteiner {
+    max-width: 970px;
+  }
+
+  .header__content {
+    padding: 100px 0 40px 0;
+  }
+
+  .get-card {
+    padding: 100px 0 40px 0;
+  }
+  .get-card__wrp-card-pluce {
+    padding: 100px 0;
+  }
+
+  .baner::before {
+    top: 100px;
+    left: -80px;
+  }
+  .baner__wrp-img::after, .baner__wrp-img::before {
+    display: none;
+  }
+
+  .card-plus {
+    max-width: 310px;
+    max-height: 320px;
+    padding: 25px 20px;
+  }
+  .card-plus__img {
+    margin-bottom: 20px;
+  }
+  .card-plus__title {
+    margin-bottom: 20px;
+  }
+
+  .happy-users {
+    color: #ffffff;
+    padding: 100px 0;
+  }
+
+  .messege {
+    padding: 100px 0 160px 0;
+  }
+  .messege__wrp {
+    max-width: 475px;
+  }
+}
+@media (max-width: 992px) {
+  .conteiner {
+    max-width: 750px;
+  }
+
+  .header__content {
+    padding: 80px 0 40px 0;
+  }
+
+  .baner::before {
+    top: 100px;
+    left: -130px;
+  }
+  .baner__wrp-img {
+    background-image: none;
+    padding: 0;
+  }
+
+  .get-card {
+    padding: 80px 0 80px 0;
+  }
+  .get-card__wrp-card-pluce {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0 40px 0;
+  }
+
+  .card-plus {
+    padding: 80px 60px;
+    max-width: 500px;
+    max-height: 400px;
+  }
+  .card-plus:hover::before {
+    width: 120%;
+    top: 0;
+    left: -10%;
+    height: 100%;
+  }
+  .card-plus__img {
+    margin-bottom: 30px;
+  }
+  .card-plus__title {
+    margin-bottom: 30px;
+  }
+  .card-plus:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .happy-users {
+    color: #ffffff;
+    padding: 80px 0;
+  }
+  .happy-users__wrp {
+    flex-wrap: wrap;
+  }
+  .happy-users__indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .happy-users__icon {
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .happy-users__title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 40px;
+    line-height: 36px;
+  }
+  .happy-users__text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .messege {
+    padding: 80px 0 80px 0;
+  }
+  .messege__wrp {
+    max-width: 365px;
+  }
+}
+@media (max-width: 768px) {
+  .conteiner {
+    max-width: 550px;
+  }
+
+  .header__content {
+    padding: 50px 0;
+  }
+
+  .baner::before {
+    display: none;
+  }
+  .baner__wrp-img {
+    display: none;
+  }
+  .baner__apply-btn {
+    margin: 0;
+  }
+  .baner__title {
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  .baner__text {
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 30px;
+  }
+
+  .get-card {
+    padding: 50px 0;
+  }
+  .get-card__wrp-card-pluce {
+    padding: 40px 0 10px 0;
+  }
+
+  .card-plus {
+    padding: 50px 40px;
+    max-width: 450px;
+    max-height: 350px;
+  }
+
+  .happy-users {
+    color: #ffffff;
+    padding: 60px 0;
+  }
+  .happy-users__wrp {
+    flex-wrap: wrap;
+  }
+  .happy-users__indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .happy-users__icon {
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .happy-users__title {
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .happy-users__text {
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 100px;
+  }
+
+  .messege {
+    padding: 80px 0 80px 0;
+  }
+  .messege__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .messege__form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .messege__wrp {
+    -ms-grid-row-align: stretch;
+        align-self: stretch;
+    max-width: 550px;
+  }
+  .messege__wrp:first-child {
+    margin-bottom: 20px;
+  }
+  .messege__wrp > input:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .conteiner {
+    max-width: 360px;
+  }
+
+  .header__content {
+    padding: 30px 0;
+  }
+
+  .baner__title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+  .baner__text {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+  .baner__apply-btn {
+    transition: color 0.5s, background-color 0.5s;
+    padding: 4px 40px;
+    background-color: #ffffff;
+    color: #0b4bec;
+    white-space: nowrap;
+  }
+  .baner__apply-btn_text {
+    font-size: 12px;
+    line-height: 28px;
+  }
+
+  .get-card {
+    padding: 30px 0;
+  }
+  .get-card__wrp-card-pluce {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+  .get-card__slogan {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .get-card__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .card-plus {
+    padding: 20px 20px;
+    max-width: 320px;
+    max-height: 400px;
+  }
+  .card-plus:hover::before {
+    width: 105%;
+    top: 0;
+    left: -2.5%;
+    height: 100%;
+  }
+  .card-plus__img {
+    margin-bottom: 20px;
+  }
+  .card-plus__title {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+  .card-plus__text {
+    font-size: 12px;
+    line-height: 248x;
+  }
+  .card-plus:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .happy-users {
+    color: #ffffff;
+    padding: 30px 0;
+  }
+  .happy-users__wrp {
+    flex-wrap: wrap;
+  }
+  .happy-users__indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  .happy-users__indicator:nth-child(1), .happy-users__indicator:nth-child(2) {
+    margin-bottom: 20px;
+  }
+  .happy-users__icon {
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .happy-users__title {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .happy-users__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .messege {
+    padding: 30px 0;
+  }
+  .messege__wrp {
+    max-width: 370px;
+  }
+
+  .footer {
+    padding: 30px 0 30px 0;
+  }
+}
+@media (max-width: 380px) {
+  .conteiner {
+    max-width: 310px;
+  }
+
+  .card-plus {
+    max-width: 280px;
+  }
+}

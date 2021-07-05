@@ -1,0 +1,368 @@
+/*Nulling style*/
+@import "reset.scss";
+@import "null.scss";
+/*fonts*/
+@import "fonts.scss";
+//other import
+@import "variable.scss";
+@import "mixin.scss";
+/*shared style*/
+@import "template.scss";
+/*page style*/
+.page {
+  max-width: 1920px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  &__main {
+    flex-grow: 1;
+  }
+}
+.conteiner {
+  margin: 0 auto;
+  max-width: 1170px;
+  box-sizing: border-box;
+}
+.content-index-top {
+  position: relative;
+  z-index: 2;
+}
+/*header style*/
+.header {
+  background-color: #bebebe;
+  background: $background-gradient;
+  &__high-line {
+    @include background-liner-gradient(
+      #ffffff,
+      linear-gradient(to top, #071d68 0%, #0b4bec 100%),
+      0.1
+    );
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    padding: 38.5px 0;
+  }
+  &__content {
+    padding: 190px 0 40px 0;
+  }
+}
+.logo {
+  color: $font-color-white;
+  display: flex;
+  align-items: center;
+  &__img {
+    margin: 0 15px 0 0;
+  }
+  &__text {
+    white-space: nowrap;
+    @extend %text-poppins-semibold;
+    @include text-size(18px, 26px);
+    text-transform: uppercase;
+    letter-spacing: 0.18px;
+    text-shadow: 0 3px 3px rgba(30, 28, 28, 0.75);
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "Be Safe Banking";
+      @extend %text-poppins-light;
+      @include text-size(12px, 26px);
+      text-transform: initial;
+      letter-spacing: 2.5px;
+      top: 19px;
+      left: 0;
+    }
+  }
+}
+.menu {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+  &__nav {
+    padding: 0 37px;
+    display: flex;
+    flex-wrap: wrap;
+    &_element:not(:first-child) {
+      margin-left: 45px;
+    }
+  }
+  &__item {
+    display: block;
+    color: $font-color-white;
+    white-space: nowrap;
+    transition: $transition-time;
+    &_text {
+      @extend %text-poppins-semibold;
+      @include text-size(14px, 26px);
+      letter-spacing: 0.14px;
+      text-transform: uppercase;
+    }
+    @include hover-header-links;
+    @include active-header-links;
+  }
+  &__login-btn {
+    border-radius: 12px;
+    @include btn(1px 13px, $btn-color-background-white, $btn-color-blue);
+    &_text {
+      @extend %text-poppins-semibold;
+      @include text-size(14px, 28px);
+      letter-spacing: -0.3px;
+    }
+    @include hover-header-btn;
+    @include active-header-btn;
+  }
+}
+.baner {
+  color: $font-color-white;
+  position: relative;
+  @include flex-wrp-column;
+  &::before {
+    content: "";
+    z-index: 1;
+    width: 196px;
+    height: 293px;
+    position: absolute;
+    top: 55px;
+    left: -115px;
+    background: url(/img/header-back-1.png) center/cover no-repeat;
+  }
+  &__title {
+    @extend %text-poppins-semibold;
+    @include text-size(40px, normal);
+    margin-bottom: 30px;
+  }
+  &__text {
+    max-width: 940px;
+    @extend %text-nunito-regular;
+    @include text-size(14px, 28px);
+    margin-bottom: 56px;
+  }
+  &__apply-btn {
+    margin-bottom: 92px;
+    border-radius: 22px;
+    @include btn(8px 48px, $btn-color-background-white, $btn-color-blue);
+    &_text {
+      @extend %text-poppins-semibold;
+      @include text-size(14px, 28px);
+      text-transform: uppercase;
+    }
+    @include hover-header-btn;
+    @include active-header-btn;
+  }
+  &__wrp-img {
+    padding-bottom: 152px;
+    position: relative;
+    background-image: url(/img/header-1b.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    &::after {
+      content: "";
+      z-index: 1;
+      width: 414px;
+      height: 370px;
+      position: absolute;
+      top: 63px;
+      left: -304px;
+      background: url(/img/header-2.png) center/cover no-repeat;
+    }
+    &::before {
+      content: "";
+      z-index: 1;
+      width: 414px;
+      height: 370px;
+      position: absolute;
+      top: 63px;
+      right: -304px;
+      background: url(/img/header-2.png) center/cover no-repeat;
+    }
+  }
+  &__img {
+    display: block;
+    width: 570px;
+    height: 357px;
+    position: relative;
+  }
+}
+/*main style*/
+/*get card section*/
+.get-card {
+  background-color: #f3f2f2;
+  padding: 160px 0 100px 0;
+  &__slogan {
+    display: block;
+    margin-bottom: 20px;
+    @extend %text-poppins-regular;
+    @include text-size(24px, 28px);
+    text-transform: uppercase;
+    color: $font-color-gray;
+  }
+  &__title {
+    @extend %text-poppins-semibold;
+    @include text-size(30px, 28px);
+    text-transform: uppercase;
+    color: $font-color-black;
+  }
+  &__wrp-card-pluce {
+    display: flex;
+    justify-content: space-between;
+    padding: 140px 0;
+  }
+}
+.card-plus {
+  @include flex-wrp-column;
+  background-color: #ffffff;
+  padding: 50px 40px;
+  max-width: 370px;
+  max-height: 345px;
+  position: relative;
+  & > * {
+    z-index: 5;
+  }
+  &:hover > span,
+  &:hover > p {
+    color: $font-color-white;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+  }
+  &:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: -12%;
+    height: 42/345 * 100% * 2+100%;
+    background: #0934a9;
+    // background-image: linear-gradient(-18deg, #071d68 0%, #0b4bec 100%);
+    z-index: 3;
+    transition: all 0.5s;
+  }
+  &__img {
+    margin-bottom: 23px;
+  }
+  &__title {
+    margin-bottom: 23px;
+    text-align: center;
+    @extend %text-poppins-semibold;
+    @include text-size(20px, 20px);
+    text-transform: uppercase;
+    color: $font-color-black;
+  }
+  &__text {
+    text-align: center;
+    @extend %text-raleway-regular;
+    @include text-size(13.5px, 28px);
+    color: $font-color-gray;
+  }
+}
+/*happy users section*/
+.happy-users {
+  color: $font-color-white;
+  background: url("/img/indicatos-background.png") center/cover;
+  padding: 180px 0;
+  @include background-liner-gradient(#0b4bec, $background-gradient, 0.9);
+  &__wrp {
+    display: flex;
+    justify-content: space-between;
+    & > * {
+      z-index: 5;
+    }
+  }
+  &__indicator {
+    @include flex-wrp-column;
+  }
+  &__icon {
+    margin-bottom: 50px;
+    @include text-size(56px, 42px);
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @extend %text-poppins-semibold;
+    @include text-size(52px, 40px);
+  }
+  &__text {
+    @extend %text-poppins-semibold;
+    @include text-size(24px, 24px);
+  }
+}
+/*messeg section*/
+.messege {
+  padding: 137px 0 273px 0;
+  &__title {
+    margin-bottom: 50px;
+    color: $font-color-black;
+    text-align: left;
+    @extend %text-poppins-semibold;
+    @include text-size(30px, 28px);
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__wrp {
+    @include flex-wrp-column;
+    max-width: 550px;
+    align-items: stretch;
+    flex-grow: 1;
+    & > input, &> textarea {
+      padding: 10px 20px;
+      border: 1px solid #e0e0e0;
+      color: $font-color-black;
+      text-align: left;
+      @extend %text-raleway-regular;
+      @include text-size(14px, 28px);
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      &[name="username"]{
+        text-transform: capitalize;
+      }
+    }
+    &> textarea{
+      padding-bottom: 63px;
+    }
+    & > button {
+      padding: 10.8px;
+      background-color: $btn-color-background-blue;
+      color: $font-color-white;
+      @extend %text-raleway-regular;
+      @include text-size(14px, 28px);
+      white-space: nowrap;
+      transition: $transition-time;
+      &:hover {
+        background-color: #8f98be;
+      }
+      &:active {
+        color: $btn-color-blue;
+        background-color: $btn-color-white;
+        border: 0.1px solid $btn-color-blue;
+      }
+    }
+  }
+}
+/*footer style*/
+.footer {
+  background: url("/img/fouter-background.png") center/cover;
+  padding: 34px 0 67px 0;
+  @include background-liner-gradient(#0b4bec, $background-gradient, 0.9);
+  &__text {
+    @extend %text-poppins-regular;
+    @include text-size(14px, 26px);
+    color: $font-color-white;
+    text-align: center;
+  }
+}
+
+@import"media.scss";
