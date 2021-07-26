@@ -44,9 +44,9 @@
 }
 @mixin active-header-btn {
   &:active {
-    color: $btn-color-white;
-    background-color: $btn-color-blue;
-    border: 0.1px solid $btn-color-white;
+    color: $color-btn-white;
+    background-color: $color-btn-blue;
+    border: 0.1px solid $color-btn-white;
   }
 }
 @mixin hover-header-links {
@@ -56,8 +56,8 @@
 }
 @mixin active-header-links {
   &:active {
-    color: $btn-color-blue;
-    background-color: $btn-color-white;
+    color: $color-btn-blue;
+    background-color: $color-btn-white;
     border-radius: 6px;
   }
 }
@@ -65,5 +65,5 @@
 @mixin flex-wrp-column {
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }

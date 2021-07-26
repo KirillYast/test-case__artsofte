@@ -14,3 +14,21 @@
 %text-raleway-regular {
   @include text-font($font-raleway, $font-regular);
 }
+//size-text
+%size-text {
+  @include text-size($size-text-page, $line-height-text-page);
+}
+%size-btn {
+  @include text-size($size-btn, $line-height-btn);
+}
+%size-h2 {
+  @include text-size($size-title-h2, $line-height-title-h2);
+}
+%size-h2-slogan {
+  @include text-size($size-title-h2-slogan, $line-height-title-h2);
+}
+//z-index
+%index-2 {
+  position: relative;
+  z-index: 3;
+}

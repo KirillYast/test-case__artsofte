@@ -1,16 +1,12 @@
+/*1200*/
 @media (max-width: 1200px) {
   .conteiner {
     max-width: 970px;
   }
+  //header
   .header {
     &__content {
       padding: 100px 0 40px 0;
-    }
-  }
-  .get-card {
-    padding: 100px 0 40px 0;
-    &__wrp-card-pluce {
-      padding: 100px 0;
     }
   }
   .baner {
@@ -18,11 +14,28 @@
       top: 100px;
       left: -80px;
     }
+    &__title {
+      &::after {
+        top: 42px;
+        right: -150px;
+      }
+      &::before {
+        top: 168px;
+        right: -150px;
+      }
+    }
     &__wrp-img {
       &::after,
       &::before {
         display: none;
       }
+    }
+  }
+  //main
+  .get-card {
+    padding: 100px 0 40px 0;
+    &__wrp-card-pluce {
+      padding: 100px 0;
     }
   }
   .card-plus {
@@ -37,8 +50,14 @@
     }
   }
   .happy-users {
-    color: $font-color-white;
+    color: $color-text-white;
     padding: 100px 0;
+    &__wrp {
+      padding: 0;
+    }
+    &__icon {
+      margin-bottom: 40px;
+    }
   }
   .messege {
     padding: 100px 0 160px 0;
@@ -47,25 +66,48 @@
     }
   }
 }
+/*992*/
 @media (max-width: 992px) {
   .conteiner {
     max-width: 750px;
   }
+  //header
   .header {
     &__content {
       padding: 80px 0 40px 0;
     }
   }
+  .menu {
+    &__nav {
+      padding: 0 0 0 25px;
+      &_element:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+    &__login-btn{
+      margin-left: 25px;
+    }
+  }
   .baner {
     &::before {
-      top: 100px;
       left: -130px;
+    }
+    &__title {
+      &::after {
+        top: 32px;
+        right: -250px;
+      }
+      &::before {
+        top: 158px;
+        right: -250px;
+      }
     }
     &__wrp-img {
       background-image: none;
       padding: 0;
     }
   }
+  //main
   .get-card {
     padding: 80px 0 80px 0;
     &__wrp-card-pluce {
@@ -95,7 +137,7 @@
     }
   }
   .happy-users {
-    color: $font-color-white;
+    color: $color-text-white;
     padding: 80px 0;
     &__wrp {
       flex-wrap: wrap;
@@ -108,12 +150,10 @@
       @include text-size(40px, 40px);
     }
     &__title {
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      @include text-size(40px, 36px);
+      @include text-size(40px, 48px);
     }
     &__text {
-      @include text-size(18px, 20px);
+      @include text-size(18px, 24px);
     }
   }
   .messege {
@@ -123,18 +163,96 @@
     }
   }
 }
+/*768*/
 @media (max-width: 768px) {
   .conteiner {
     max-width: 550px;
   }
+  //header
   .header {
     &__content {
       padding: 50px 0;
+    }
+    &__menu {
+      padding: 10px 0;
+    }
+  }
+  .menu {
+   // position: relative;
+    &__burger {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      &::before,
+      &::after,
+      & span {
+        content: "";
+        background-color: #ffffff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      & span {
+        top: 9px;
+      }
+      &.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+        transition: all 0.3s;
+      }
+      &.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+        transition: all 0.3s;
+      }
+      &.active span {
+        transform: scale(0);
+      }
+    }
+    &__nav {
+      display: none;
+      &_element:not(:first-child) {
+        margin-left: 0px;
+      }
+      &.active {
+        position: fixed;
+        top: 63px;
+        left: 0;
+        width: 100%;
+        height: 425px - 63;
+        background-image:$background-gradient;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+      }
+    }
+    &__login-btn{
+      display: block;
+      margin: 10px 0 0 0;
     }
   }
   .baner {
     &::before {
       display: none;
+    }
+    &__title {
+      &::after {
+        display: none;
+      }
+      &::before {
+        display: none;
+      }
     }
     &__wrp-img {
       display: none;
@@ -143,14 +261,14 @@
       margin: 0;
     }
     &__title {
-      @include text-size(38px, 40px);
+      line-height: $line-height-title-h1 * 42/26;
       margin-bottom: 20px;
     }
     &__text {
-      @include text-size(14px, 28px);
       margin-bottom: 30px;
     }
   }
+  //main
   .get-card {
     padding: 50px 0;
     &__wrp-card-pluce {
@@ -163,7 +281,7 @@
     max-height: 350px;
   }
   .happy-users {
-    color: $font-color-white;
+    color: $color-text-white;
     padding: 60px 0;
     &__wrp {
       flex-wrap: wrap;
@@ -176,12 +294,10 @@
       @include text-size(30px, 30px);
     }
     &__title {
-      text-transform: uppercase;
-      margin-bottom: 6px;
-      @include text-size(28px, 36px);
+      @include text-size(28px, 42px);
     }
     &__text {
-      @include text-size(18px, 20px);
+      line-height: 20px;
       max-width: 100px;
     }
   }
@@ -213,40 +329,53 @@
   .conteiner {
     max-width: 360px;
   }
+  //header
   .header {
     &__content {
       padding: 30px 0;
     }
   }
+  .menu {
+     &__nav {
+       &.active {
+         height: 336px - 63;
+       }
+     }
+     &__login-btn{
+       display: block;
+       margin: 10px 0 0 0;
+     }
+   }
   .baner {
     &__title {
-      @include text-size(28px, 36px);
+      @include text-size($size-title-h1 * 0.8, $line-height-title-h1 * 36/26);
       margin-bottom: 10px;
     }
     &__text {
-      @include text-size(14px, 22px);
+      @include text-size(
+        $size-text-page * 12/14,
+        $line-height-text-page * 20/28
+      );
       margin-bottom: 15px;
     }
     &__apply-btn {
-      @include btn(4px 40px, $btn-color-background-white, $btn-color-blue);
+      padding: 4px 40px;
       &_text {
-        @include text-size(12px, 28px);
+        font-size: $size-btn * 12/14;
       }
     }
   }
+  //main
   .get-card {
     padding: 30px 0;
     &__wrp-card-pluce {
-      flex-direction: column;
-      align-items: center;
       padding: 40px 0;
     }
     &__slogan {
-      margin-bottom: 10px;
-      @include text-size(18px, 24px);
+      @include text-size($size-title-h2 * 18/24, $line-height-title-h2 * 32/42);
     }
     &__title {
-      @include text-size(24px, 28px);
+      @include text-size($size-title-h2 * 24/30, $line-height-title-h2 * 32/42);
     }
   }
   .card-plus {
@@ -267,22 +396,26 @@
       margin-bottom: 15px;
     }
     &__text {
-      @include text-size(12px, 248x);
+      @include text-size(
+        $size-text-page * 12/14,
+        $line-height-text-page * 20/28
+      );
     }
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
   .happy-users {
-    color: $font-color-white;
+    color: $color-text-white;
     padding: 30px 0;
     &__wrp {
       flex-wrap: wrap;
     }
     &__indicator {
       @include flex-wrp-column;
-      width:50%;
-      &:nth-child(1),&:nth-child(2){
+      width: 50%;
+      &:nth-child(1),
+      &:nth-child(2) {
         margin-bottom: 20px;
       }
     }
@@ -291,9 +424,7 @@
       @include text-size(30px, 30px);
     }
     &__title {
-      text-transform: uppercase;
-      margin-bottom: 5px;
-      @include text-size(28px, 30px);
+      @include text-size(28px, 36px);
     }
     &__text {
       @include text-size(14px, 18px);
@@ -305,8 +436,15 @@
       max-width: 370px;
     }
   }
+  //footer
   .footer {
     padding: 30px 0 30px 0;
+    &__text {
+      @include text-size(
+        $size-text-page * 12/14,
+        $line-height-text-page * 20/28
+      );
+    }
   }
 }
 @media (max-width: 380px) {

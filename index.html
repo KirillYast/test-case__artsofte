@@ -7,12 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/fontello.css" />
+    <script defer src="/js/jquery-3.6.0.js"></script>
+    <script defer src="/js/main.js"></script>
   </head>
   <body class="page">
     <header class="header">
       <div class="header__high-line">
         <div class="conteiner">
-          <div class="header__menu content-index-top">
+          <div class="header__menu">
             <a href="#" class="logo">
               <img
                 src="img/logo.png"
@@ -24,6 +26,9 @@
               <span class="logo__text">Digital Banking</span>
             </a>
             <div class="menu">
+              <div class="menu__burger">
+                <span></span>
+              </div>
               <div class="menu__nav">
                 <a href="#" class="menu__item menu__item_text menu__nav_element"
                   >Cards</a
@@ -40,10 +45,10 @@
                 <a href="#" class="menu__item menu__item_text menu__nav_element"
                   >Contact</a
                 >
+                <button class="menu__login-btn menu__login-btn_text">
+                  Creat Account
+                </button>
               </div>
-              <button class="menu__login-btn menu__login-btn_text">
-                Creat Account
-              </button>
             </div>
           </div>
         </div>
@@ -122,6 +127,10 @@
           </div>
         </div>
       </section>
+      <section class="service"><div class="conteiner">
+        <span class="service__slogan">useful service avaible</span>
+        <h2 class="service__title">Service of Credit Card</h2>
+      </div></section>
       <section class="happy-users">
         <div class="conteiner">
           <div class="happy-users__wrp">
@@ -191,7 +200,7 @@
     </main>
     <footer class="footer">
       <div class="conteiner">
-        <p class="footer__text content-index-top">
+        <p class="footer__text">
           Copyright @ Digital Marketing. AllRight Reseverd
         </p>
       </div>
